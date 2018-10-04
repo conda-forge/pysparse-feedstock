@@ -16,13 +16,14 @@ source:
 
 
 build:
-  number: 0
+  number: 1
   skip: True  # [not py27]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ compiler('fortran') }}
   host:
     - python
     - pip
