@@ -27,6 +27,7 @@ requirements:
     - python
     - pip
     - distribute
+    - openblas
     - numpy
   run:
     - python
