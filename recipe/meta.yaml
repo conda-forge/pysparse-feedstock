@@ -14,7 +14,6 @@ source:
   patches:
     - brokenpip.patch
 
-
 build:
   number: 1
   skip: True  # [not py27]
@@ -28,7 +27,8 @@ requirements:
     - python
     - pip
     - distribute
-    - openblas
+    # openblas 0.3.3 [has missing symbols](https://travis-ci.org/conda-forge/pysparse-feedstock/builds/438002576?utm_source=github_status&utm_medium=notification)
+    - openblas ==0.2.20-8
     - numpy
   run:
     - python
