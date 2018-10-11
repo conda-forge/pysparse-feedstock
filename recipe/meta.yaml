@@ -26,12 +26,12 @@ requirements:
     - python
     - pip
     - distribute
-    # openblas 0.3.3 [has missing symbols](https://travis-ci.org/conda-forge/pysparse-feedstock/builds/438002576?utm_source=github_status&utm_medium=notification)
-    - openblas ==0.2.20
+    - openblas        0.2.20   # [unix]
     - numpy
   run:
     - python
     - {{ pin_compatible('numpy') }}
+    - {{ pin_compatible('openblas', max_pin='x.x.x') }}         # [unix]
 
 test:
   imports:
