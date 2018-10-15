@@ -28,6 +28,7 @@ requirements:
     - pip
     - distribute
     - openblas  # [unix]
+    - mkl    2018.0.3  # [win]
     - numpy
   run:
     - python
