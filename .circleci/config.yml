@@ -1,11 +1,11 @@
 version: 2
 
 jobs:
-  build_linux_c_compilergccpython2.7:
+  build_linux_c_compilergccfortran_compilergfortranpython2.7:
     working_directory: ~/test
     machine: true
     environment:
-      - CONFIG: "linux_c_compilergccpython2.7"
+      - CONFIG: "linux_c_compilergccfortran_compilergfortranpython2.7"
     steps:
       - checkout
       - run:
@@ -18,11 +18,11 @@ jobs:
       - run:
           # Run, test and (if we have a BINSTAR_TOKEN) upload the distributions.
           command: ./.circleci/run_docker_build.sh
-  build_linux_c_compilertoolchain_cpython2.7:
+  build_linux_c_compilertoolchain_cfortran_compilertoolchain_fortpython2.7:
     working_directory: ~/test
     machine: true
     environment:
-      - CONFIG: "linux_c_compilertoolchain_cpython2.7"
+      - CONFIG: "linux_c_compilertoolchain_cfortran_compilertoolchain_fortpython2.7"
     steps:
       - checkout
       - run:
@@ -40,5 +40,5 @@ workflows:
   version: 2
   build_and_test:
     jobs:
-      - build_linux_c_compilergccpython2.7
-      - build_linux_c_compilertoolchain_cpython2.7
+      - build_linux_c_compilergccfortran_compilergfortranpython2.7
+      - build_linux_c_compilertoolchain_cfortran_compilertoolchain_fortpython2.7
