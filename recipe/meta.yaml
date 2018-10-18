@@ -14,7 +14,6 @@ source:
   patches:
     - brokenpip.patch
 
-
 build:
   number: 1000
   skip: True  # [not py27]
@@ -34,6 +33,7 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
+    - {{ pin_compatible('openblas', max_pin='x.x.x') }}         # [unix]
 
 test:
   imports:
