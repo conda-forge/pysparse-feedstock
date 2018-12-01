@@ -15,7 +15,7 @@ source:
     - brokenpip.patch
 
 build:
-  number: 1001
+  number: 1002
   skip: True  # [not py27]
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
@@ -27,7 +27,7 @@ requirements:
     - pip
     - distribute
     - openblas        0.2.20   # [unix]
-    - mkl             2018.0.3  # [win]
+    - mkl             # [win]
     - numpy
   run:
     - python
