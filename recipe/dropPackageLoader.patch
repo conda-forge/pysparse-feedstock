@@ -1,14 +1,16 @@
 diff --git a/pysparse/__init__.py b/pysparse/__init__.py
-index 6d09b00..46669a4 100644
+index 6d09b00..ff39084 100644
 --- a/pysparse/__init__.py
 +++ b/pysparse/__init__.py
-@@ -1,9 +1,35 @@
+@@ -1,9 +1,42 @@
 -"PySparse: A Fast Sparse Matrix Library for Python"
 +"""
 +PySparse: A Fast Sparse Matrix Library for Python
 +=================================================
++
 +Documentation is available in the docstrings and
 +online at http://pysparse.sourceforge.net/.
++
 +Contents
 +--------
 +Pysparse imports
@@ -16,20 +18,25 @@ index 6d09b00..46669a4 100644
 + spmatrix                     --- sparse matrix types
 +
 +and, in addition, provides:
++    
 +Subpackages
 +-----------
 +Using any of these subpackages requires an explicit import.  For example,
 +``import pysparse.itsolvers``.
++
 +::
++
 + itsolvers                    --- Iterative linear algebra solvers
 + precon                       --- Preconditioners
 + direct                       --- Direct solvers
 + direct.superlu               --- Wrappers to SuperLU library
 + direct.umfpack               --- Wrappers to UMFPACK library
 + eigen.jdsym                  --- Jacobi davidson eigenvalue solver for symmetric matrices
++ 
 +Utility tools
 +-------------
 +::
++
 + __version__       --- pysparse version string
 +"""
 +
@@ -41,7 +48,7 @@ index 6d09b00..46669a4 100644
  try:
      from version import version as __version__
  except ImportError:
-@@ -11,31 +37,6 @@ except ImportError:
+@@ -11,31 +44,6 @@ except ImportError:
      __version__ = 'undefined'
      
  from sparse import spmatrix
@@ -73,7 +80,7 @@ index 6d09b00..46669a4 100644
  
  from pysparse.misc import Deprecated
  
-@@ -47,3 +48,5 @@ class _superlu:
+@@ -47,3 +55,5 @@ class _superlu:
          return self.factorizeFnc(*args, **kwargs)
      
  superlu = _superlu()
