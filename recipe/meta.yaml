@@ -27,13 +27,12 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - mkl-devel  # [win]
   host:
     - python
     - pip
     - distribute
     - openblas        # [unix]
-    - mkl             # [win]
+    - mkl-devel       # [win]
     - numpy
   run:
     - python
