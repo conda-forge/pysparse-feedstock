@@ -22,7 +22,7 @@ source:
 build:
   number: 6
   skip: True  # [not py27]
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
