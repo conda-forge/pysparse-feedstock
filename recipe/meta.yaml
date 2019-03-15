@@ -27,6 +27,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - mkl-devel  # [win]
   host:
     - python
     - pip
