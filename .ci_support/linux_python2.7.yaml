@@ -1,18 +1,20 @@
 c_compiler:
 - gcc
+c_compiler_version:
+- '7'
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 docker_image:
 - condaforge/linux-anvil-comp7
-mkl:
-- '2018'
 numpy:
 - '1.9'
+openblas:
+- 0.3.3
 pin_run_as_build:
-  mkl:
-    max_pin: x
+  openblas:
+    max_pin: x.x.x
   python:
     min_pin: x.x
     max_pin: x.x
