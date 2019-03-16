@@ -20,7 +20,7 @@ source:
     - dropPackageLoader.patch
 
 build:
-  number: 6
+  number: 7
   skip: True  # [not py27]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
@@ -31,13 +31,12 @@ requirements:
     - python
     - pip
     - distribute
-    - openblas        # [unix]
-    - mkl-devel       # [win]
+    - openblas
     - numpy
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - {{ pin_compatible('openblas', max_pin='x.x.x') }}         # [unix]
+    - {{ pin_compatible('openblas', max_pin='x.x.x') }}
 
 test:
   imports:
