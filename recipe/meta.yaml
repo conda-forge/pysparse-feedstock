@@ -29,7 +29,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - libblas
-    - libcblas
+    - liblapack
     - python
     - pip
     - distribute
@@ -37,7 +37,6 @@ requirements:
   run:
     - python
     - {{ pin_compatible('numpy') }}
-    - {{ pin_compatible('openblas', max_pin='x.x.x') }}         # [unix]
 
 test:
   imports:
