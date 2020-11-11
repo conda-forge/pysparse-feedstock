@@ -5,9 +5,13 @@ Home: http://pysparse.sourceforge.net
 
 Package license: BSD-2-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pysparse-feedstock/blob/master/LICENSE.txt)
 
 Summary: Fast sparse matrix library for Python
+
+Development: https://sourceforge.net/projects/pysparse/
+
+Documentation: http://pysparse.sourceforge.net/contents.html
 
 Pysparse is a fast sparse matrix library for Python. It provides
 several sparse matrix storage formats and conversion methods. It also
@@ -21,30 +25,6 @@ Current build status
 
 
 <table>
-  <tr>
-    <td>Linux</td>
-    <td>
-      <img src="https://img.shields.io/badge/linux-disabled-lightgrey.svg" alt="linux disabled">
-    </td>
-  </tr>
-  <tr>
-    <td>OSX</td>
-    <td>
-      <img src="https://img.shields.io/badge/OSX-disabled-lightgrey.svg" alt="OSX disabled">
-    </td>
-  </tr>
-  <tr>
-    <td>Windows</td>
-    <td>
-      <img src="https://img.shields.io/badge/Windows-disabled-lightgrey.svg" alt="Windows disabled">
-    </td>
-  </tr>
-  <tr>
-    <td>Linux_ppc64le</td>
-    <td>
-      <img src="https://img.shields.io/badge/ppc64le-disabled-lightgrey.svg" alt="ppc64le disabled">
-    </td>
-  </tr>
 </table>
 
 Current release info
