@@ -20,13 +20,14 @@ source:
     - dropPackageLoader.patch
 
 build:
-  number: 8
+  number: 9
   skip: True  # [not py27]
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - libblas
     - liblapack
@@ -36,7 +37,6 @@ requirements:
     - numpy
   run:
     - python
-    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
